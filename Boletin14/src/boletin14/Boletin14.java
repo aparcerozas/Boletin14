@@ -17,8 +17,17 @@ public class Boletin14 {
     public static void main(String[] args) {
         // TODO code application logic here
         ConversorTemperaturas perita = new ConversorTemperaturas();
-        System.out.println(perita.centigradosAFahrenheit(120));
-        System.out.println(perita.centigradosAReamur(78));
+        try{
+            System.out.println(perita.centigradosAFahrenheit(120));
+        }catch(Exception e){
+            System.out.println("A temperatura non pode ser menor de 80 graos");
+        }
+        try{
+            System.out.println(perita.centigradosAReamur(78));
+        }catch(Exception e){
+            System.out.println("A temperatura non pode ser menor de 80 graos");
+        }
+        
     }
     
 }
